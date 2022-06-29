@@ -1,0 +1,93 @@
+
+.contenedor-uno{
+    display: grid;
+    grid-template-areas: "header""main""footer";
+    grid-template-rows: 1fr 4fr 1fr;
+    min-height: 100vh;
+    video{
+        position: fixed;
+        
+        min-width: 100%;
+        min-height: 100%;
+    
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    
+        z-index: -1;
+    
+        -webkit-filter: grayscale(100%); 
+        opacity: 15%;
+    }    
+    .header{
+        grid-area: header;
+    }
+    .main{
+        @include flex-center-col;
+        grid-area: main;
+        .centrado-h1{ 
+            width: 45%;
+            margin-bottom: 5rem;
+            display: flex;
+            justify-content: center;
+            .main__h1{
+                text-align: center;
+                font-size: 8rem;
+                font-family: 'Clicker Script', cursive;
+                color: $color-titles;
+                text-shadow: $text-shadows-titles;
+            }
+        }
+        .main__h2{
+            text-align: center;
+            font-size: 4rem;
+            color: $color-titles;
+            text-shadow: $text-shadows-titles;
+        }
+    }
+}
+@media screen and (min-width:601px){
+    .contenedor-uno{
+        .main{
+            .centrado-h1{
+                width: 70%;
+                .main__h1{
+                    font-size: 10rem;
+                }
+            }
+            .main__h2{
+                font-size: 5rem;
+            }
+        }
+        
+    }
+}
+@media screen and (min-width:992px){
+    .contenedor-uno{
+        .main{
+            .centrado-h1{
+                width: 100%;
+                .main__h1{
+                    font-size: 13rem;
+                }
+            }
+            .main__h2{
+                font-size: 6rem;
+            }
+        }  
+    }
+}
+@media screen and (min-width:1367px){
+    .contenedor-uno{
+        .main{
+            .centrado-h1{
+                .main__h1{
+                    font-size: 15rem;
+                }
+            }
+            .main__h2{
+                font-size: 7rem;
+            }
+        } 
+    }
+}

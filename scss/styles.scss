@@ -1,0 +1,136 @@
+
+//Variables, extend y mixin
+
+@import "utilities/variables";
+
+@import "utilities/mixin";
+
+@import "utilities/extend";
+
+
+/*Estilos compartidos*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+body{
+    position: relative;
+    font-size: 1.5rem;
+    background-image: url(../img/fondo3.png);
+    background-color: $bg-color;
+    min-height: 100vh;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+//menu (mobile)
+
+.menu{
+    background-color: $bg-color;
+    .menu__div-fluid{
+        padding: 0;
+        .menu__a-home{
+            color: $color-titles;
+            margin: 0.2rem 0rem;
+            padding: 0.5rem 2rem;
+            font-size: 1.6rem; 
+        }
+        .menu__icono{
+            margin-right: 1rem;
+            padding: 0.3rem;
+            background-color: transparent;
+            border: none;
+        }
+        .menu__li{
+            margin: 0.2rem 0rem;
+            padding: 0.5rem 2rem;
+            font-size: 1.6rem;
+            .menu__a{
+                color: $color-titles;
+                text-decoration: none;
+            } 
+        }
+    }
+}
+.footer{
+    grid-area: footer;
+    text-align: center;
+    background-color: #1d3557;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5rem;
+    .footer__img img{
+        margin: 0.5rem 1rem 0rem 1rem;
+    }
+    .footer__h2{
+        color: white;
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+//menu (tablet)
+@media screen and (min-width:601px){
+
+    .menu{
+        .menu__div-fluid{
+            .menu__a-home{       
+                font-size: 1.8rem; 
+            }
+            .menu__a{
+                font-size: 1.8rem;
+            }
+            .menu__icono img{
+                width: 3rem;
+            }
+        }
+    }
+    .footer {
+        .footer__h2{
+            font-size: 1.8rem;
+        }
+    }
+}
+
+//colapso del nav
+@media screen and (min-width:992px){
+    
+    .menu{
+        .menu__div-fluid{
+            .menu__a-home{
+                font-size: 2.1rem;
+                margin-left: 2.1rem; 
+            }
+            .menu__a-home:hover{
+                color: $color-titles;
+                background-color: #457b9d42;
+                border-radius: 1rem;
+            }
+            .menu__icono{
+                display: none;
+            }
+            .menu__li{
+                margin: 0rem 3rem;
+                .menu__a{
+                    font-size: 2.1rem;
+                }
+                .menu__a:hover{
+                    color: $color-titles;  
+                }
+            }
+            .menu__li:hover{
+                background-color: $hover-color;
+                border-radius: 1rem;
+            }
+        }  
+    }  
+}
+
+@import "utilities/home";
+@import "utilities/cb"
