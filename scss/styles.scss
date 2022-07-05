@@ -32,28 +32,38 @@ body{
 .menu{
     background-color: $bg-color;
     .menu__div-fluid{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         padding: 0;
-        .menu__a-home{
+        margin: 0.5rem 0rem;
+        .a-none{
             color: $color-titles;
-            margin: 0.2rem 0rem;
-            padding: 0.5rem 2rem;
-            font-size: 1.6rem; 
+            margin:0rem 0rem 0rem 2rem;
+            font-size: 1.8rem;
+            text-decoration: none;
         }
         .menu__icono{
-            margin-right: 1rem;
+            margin-right: 2rem;
             padding: 0.3rem;
             background-color: transparent;
             border: none;
         }
-        .menu__li{
-            margin: 0.2rem 0rem;
-            padding: 0.5rem 2rem;
-            font-size: 1.6rem;
-            .menu__a{
-                color: $color-titles;
-                text-decoration: none;
-            } 
+        .menu__ul{
+            .menu__li{
+                margin: 0.2rem 0rem;
+                padding: 0.5rem 2rem;
+                font-size: 1.8rem;
+                .menu__a{
+                    color: $color-titles;
+                    text-decoration: none;
+                } 
+            }
+            .menu__li:nth-child(1){
+                display: none;
+            }
         }
+        
     }
 }
 .footer{
@@ -80,15 +90,17 @@ body{
 
     .menu{
         .menu__div-fluid{
-            .menu__a-home{       
-                font-size: 1.8rem; 
-            }
-            .menu__a{
-                font-size: 1.8rem;
+            .a-none{
+                font-size: 2.1rem;
             }
             .menu__icono img{
                 width: 3rem;
             }
+            .menu__ul{
+                .menu__li{
+                    font-size: 2.1rem;
+                }
+            } 
         }
     }
     .footer {
@@ -103,34 +115,39 @@ body{
     
     .menu{
         .menu__div-fluid{
-            .menu__a-home{
-                font-size: 2.1rem;
-                margin-left: 2.1rem; 
-            }
-            .menu__a-home:hover{
-                color: $color-titles;
-                background-color: #457b9d42;
-                border-radius: 1rem;
-            }
             .menu__icono{
                 display: none;
             }
-            .menu__li{
-                margin: 0rem 3rem;
-                .menu__a{
-                    font-size: 2.1rem;
+            .a-none{
+                display: none;
+            }
+            .menu__ul{
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                .menu__li{
+                    .menu__a{
+                        font-size: 2.5rem;
+                    }
+                    .menu__a:hover{
+                        color: $color-titles;  
+                    }
                 }
-                .menu__a:hover{
-                    color: $color-titles;  
+                .menu__li:nth-child(1){
+                    display:block;
+                }
+                .menu__li:hover{
+                    background-color: $hover-color;
+                    border-radius: 1rem;
                 }
             }
-            .menu__li:hover{
-                background-color: $hover-color;
-                border-radius: 1rem;
-            }
+            
         }  
     }  
 }
 
 @import "utilities/home";
-@import "utilities/cb"
+@import "utilities/cb";
+@import "utilities/bach";
+@import "utilities/sobmi";
+@import "utilities/contacto";

@@ -1,4 +1,4 @@
-
+//mobile
 %subtitulos {
     color: $color-titles;
     height: 10rem; 
@@ -8,3 +8,46 @@
     font-size: 3.5rem;  
     margin-bottom: 0.5rem;
 }
+
+// Sobre mí
+
+// mobile
+%div-img-sobmi{
+    background-color:rgba(255, 255, 255, 0.623);
+    padding: 2rem;
+    border-start-start-radius: 1rem;
+    border-start-end-radius: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 35px -10px black;
+    width: 50%;
+    max-width: 24rem;
+    @include flex-center;
+    
+}
+
+%p-sobmi{
+    color: white;
+    text-align: center;
+    width: 75%;
+    font-size: 2rem;
+    box-shadow: 1px -1px 0.1px white inset,
+                -1px -1px 0.1px white inset,
+                0px 0px 35px -10px black;
+    padding: 1rem 2rem 1.5rem 2rem;
+}
+
+// tablet 
+@media screen and (min-width:601px){
+    %div-img-sobmi2{
+        max-width: 30rem;
+        width: 40%;
+        margin-bottom: 3rem;
+    }
+    %p-sobmi2{
+        font-size: 2.5rem;
+        width: 65%
+    }
+}
+
+
+

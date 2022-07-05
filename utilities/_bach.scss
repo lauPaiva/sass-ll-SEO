@@ -1,0 +1,108 @@
+.contenedor-tres{
+    display: grid;
+    grid-template-areas: "header""main""footer";
+    grid-template-rows: 0.5fr 3fr 0.2fr;
+    .header{
+        grid-area: header;
+        .header__h1{
+            @include titulos;
+        }
+    }
+    .main{
+        grid-area: main;
+        font-size: 2rem;
+        .cont-1{
+            @include flex-center-col;
+            width: 100%;
+            margin-bottom: 7rem;
+            .div-img{
+                @include flex-center-col;
+                img{
+                    width: 80%;
+                    max-width: 40rem;
+                    border-start-end-radius: 1rem;
+                    border-start-start-radius: 1rem;
+                    border: 2.5px solid white;
+                }
+            }
+            .p1{
+                color: white;
+                text-align: center;
+                width: 75%;
+                box-shadow: 1px -1px 0.1px white inset,
+                            -1px -1px 0.1px white inset,
+                            0px 0px 35px -10px black;
+                padding: 1rem 2rem 1.5rem 2rem;
+                margin-top: 2rem;
+            }
+        }
+        .cont-2{
+            @include flex-center-col;
+            width: 100%;
+            
+            .div-img{
+                @include flex-center-col;
+                img{
+                    width: 80%;
+                    max-width: 40rem;
+                    border-start-end-radius: 1rem;
+                    border-start-start-radius: 1rem;
+                    border: 2.5px solid white;
+                }
+            }
+            .p2{
+                color: white;
+                text-align: center;
+                width: 75%;
+                box-shadow: 1px -1px 0.1px white inset,
+                            -1px -1px 0.1px white inset,
+                            0px 0px 35px -10px black;
+                padding: 1rem 2rem 1.5rem 2rem;
+                margin-top: 2rem;
+            }
+        }
+    }
+    .footer{
+        grid-area: footer;
+    }
+}
+@media screen and (min-width:601px){
+    .contenedor-tres{
+        .header{
+            .header__h1{
+                font-size: 9rem;
+            }
+        }
+        .main{
+            font-size: 2rem;
+        }
+    }
+}
+@media screen and (min-width:1024px){
+    .contenedor-tres{
+        grid-template-rows: 0.5fr 1fr 0.2fr;
+        .header{
+            .header__h1{
+                font-size: 12rem;
+            }
+        }
+        .main{
+            display: grid;
+            grid-template-areas: "cont1 cont2";
+            font-size: 2.5rem;
+            .cont-1{
+                grid-area: cont1;
+                .p1{
+                    margin-top: 4rem;
+                }
+            }
+            .cont-2{
+                grid-area: cont2;
+                margin-bottom: 7rem;
+                .p2{
+                    margin-top: 4rem;
+                }
+            }
+        }
+    }
+}
