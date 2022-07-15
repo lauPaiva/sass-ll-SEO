@@ -1,7 +1,7 @@
 .contenedor-tres{
     display: grid;
     grid-template-areas: "header""main""footer";
-    grid-template-rows: 0.5fr 3fr 0.2fr;
+    grid-template-rows: 0.5fr 4fr 0.15fr;
     .header{
         grid-area: header;
         .header__h1{
@@ -11,62 +11,60 @@
     .main{
         grid-area: main;
         font-size: 2rem;
-        .cont-1{
+        color: $color-general;
+        max-width: 100%;
+        text-align: center;
+        @include flex-center-col;
+        .cont-4to, .cont-5to, .cont-6to{
             @include flex-center-col;
-            width: 100%;
-            margin-bottom: 7rem;
-            .div-img{
+            width: 95%;
+            padding: 2rem 0rem 4rem 0rem;
+            margin-bottom: 4rem;
+            background: rgb(88,44,77);
+            background: linear-gradient(45deg, rgba(88,44,77,1) 2%, rgba(162,103,105,1) 35%, rgba(195,156,152,1) 78%, rgba(236,226,208,1) 100%); 
+            h3{
+                font-size: 5rem;
+                margin-bottom: 2rem;
+                padding: 0rem 1.5rem;
+                box-shadow: 0px 1px 0.1px white;
+            }
+            .cont-bach{
+                width: 80%;
                 @include flex-center-col;
-                img{
-                    width: 80%;
-                    max-width: 40rem;
-                    border-start-end-radius: 1rem;
-                    border-start-start-radius: 1rem;
-                    border: 2.5px solid white;
+                .div-img{
+                    @include flex-center;
+                    
+                    img{
+                        border-radius:1rem 1rem 0px 0px;; 
+                        width: 100%;
+                        margin-bottom: 2rem;
+                    }
+                }
+                .p{
+                    
+                    padding: 0.5rem 0rem 2rem 0rem; 
+                    box-shadow: 0px 1px 0.1px white; 
+                    a{
+                        color: $color-general;
+                        text-decoration: none;
+                        
+                    }         
                 }
             }
-            .p1{
-                color: white;
-                text-align: center;
-                width: 75%;
-                box-shadow: 1px -1px 0.1px white inset,
-                            -1px -1px 0.1px white inset,
-                            0px 0px 35px -10px black;
-                padding: 1rem 2rem 1.5rem 2rem;
-                margin-top: 2rem;
-            }
-        }
-        .cont-2{
-            @include flex-center-col;
-            width: 100%;
             
-            .div-img{
-                @include flex-center-col;
-                img{
-                    width: 80%;
-                    max-width: 40rem;
-                    border-start-end-radius: 1rem;
-                    border-start-start-radius: 1rem;
-                    border: 2.5px solid white;
-                }
-            }
-            .p2{
-                color: white;
-                text-align: center;
-                width: 75%;
-                box-shadow: 1px -1px 0.1px white inset,
-                            -1px -1px 0.1px white inset,
-                            0px 0px 35px -10px black;
-                padding: 1rem 2rem 1.5rem 2rem;
-                margin-top: 2rem;
-            }
+        }
+        .cont-5to{
+            margin: 2rem 0rem;
+        }
+        .cont-6to{
+            margin: 4rem 0rem 10rem 0rem;
         }
     }
     .footer{
         grid-area: footer;
     }
 }
-@media screen and (min-width:601px){
+@media screen and (min-width:600px){
     .contenedor-tres{
         .header{
             .header__h1{
@@ -74,35 +72,92 @@
             }
         }
         .main{
-            font-size: 2rem;
+            font-size: 2.5rem;
+            .cont-4to, .cont-5to, .cont-6to{
+                h3{
+                    font-size: 7rem;
+                }
+                .cont-bach{
+                    .div-img{
+                        img{ 
+                            max-width: 33rem;
+                        }
+                    }   
+                    .p{   
+                        
+                        max-width: 33rem;        
+                    }
+                }
+            }
         }
     }
 }
 @media screen and (min-width:1024px){
     .contenedor-tres{
-        grid-template-rows: 0.5fr 1fr 0.2fr;
         .header{
             .header__h1{
                 font-size: 12rem;
             }
         }
         .main{
-            display: grid;
-            grid-template-areas: "cont1 cont2";
-            font-size: 2.5rem;
-            .cont-1{
-                grid-area: cont1;
-                .p1{
-                    margin-top: 4rem;
+            font-size: 2.7rem;
+            .cont-4to, .cont-5to, .cont-6to{
+                width: 100%;
+                height: 80vh;
+                display: flex;
+                justify-content: space-evenly;
+                padding: 0;
+
+                h3{
+                    font-size: 9rem;
+                    margin: 0;
                 }
-            }
-            .cont-2{
-                grid-area: cont2;
-                margin-bottom: 7rem;
-                .p2{
-                    margin-top: 4rem;
+                .cont-bach{
+                    flex-direction: row;
+                    padding-bottom: 4.3rem;
+                    .div-img{
+                        img{
+                            max-width: 35rem;
+                            margin: 0;
+                            border-radius: 0;
+                            margin-right: 2rem;
+                        }
+                    }
+                    .p{
+                        margin-left: 2rem;
+                        max-width: 35rem;
+                        padding: 0rem 0rem 2.5rem 0rem;
+                    }
+                    
                 }
+                
             }
         }
     }
+}
+@media screen and (min-width:1366px){
+    .contenedor-tres{
+        .main{
+            font-size: 3rem;
+            .cont-4to, .cont-5to, .cont-6to{
+                margin-bottom: 12rem;
+                .cont-bach{
+                    .div-img{
+                        img{
+                            max-width: 43rem;
+                            
+                        }
+                    }
+                    
+                    .p{
+                        max-width: 45rem;
+                    }
+                    
+                }
+                
+            }
+            
+        }
+    }
+    
 }

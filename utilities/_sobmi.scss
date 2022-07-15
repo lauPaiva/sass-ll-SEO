@@ -111,6 +111,7 @@
                 }
                 .parrafo-1{
                     p{
+                        width: 50%;
                         opacity: 0;
                         transition: 1s;
                         transform: translateY(6rem);
@@ -136,6 +137,7 @@
                 }
                 .parrafo-2{
                     p{
+                        width: 50%;
                         opacity: 0;
                         transition: 1s;
                         transform: translateY(6rem);
@@ -162,6 +164,7 @@
                 }
                 .parrafo-3{
                     p{
+                        width: 50%;
                         opacity: 0;
                         transition: 1s;
                         transform: translateY(6rem);
@@ -193,12 +196,34 @@
         grid-template-areas: "cont1 cont2 cont3";
             .cont-1{
                 grid-area: cont1;
+                .div-img-1{
+                    transform: translateY(-10rem);
+                }
+                .parrafo-1{
+                    p{
+                        width: 65%;
+                    }
+                }
             }
             .cont-2{
                 grid-area: cont2;
+                .parrafo-2{
+                    p{
+                        width: 65%;
+                    }
+                }
+                
             }
             .cont-3{
                 grid-area: cont3;
+                .div-img-3{
+                    transform: translateY(10rem);
+                }
+                .parrafo-3{
+                    p{
+                        width: 65%;
+                    }
+                }
             }
         }  
     }

@@ -10,8 +10,27 @@
     }    
     .main{
         grid-area: main;
-        @include flex-center;
-        margin-top: 6rem;
+        @include flex-center-col;
+        margin-top: 2rem;
+        .div-p{
+            @include flex-center;
+            width: 100%;
+            margin-bottom: 3.5rem;
+            background: $hover-color;
+            box-shadow: 0px 1px 0.1px #bfb5af inset,
+                        0px 7px 30px -15px black;
+                        
+            p{
+                width: 80%;
+                color: $color-general;
+                font-size: 2rem;
+                text-align: center;
+                padding: 1rem 0rem; 
+                a{
+                    color: $color-general;
+                } 
+            }
+        }
         .cont-dinamico{
             display: flex;
             flex-direction: column;
@@ -25,7 +44,7 @@
                 margin-bottom: 7rem;
                 div{
                     width: 100%;
-                    box-shadow: 0px 2px 0.1px white; 
+                    box-shadow: 0px 2px 0.1px $color-shadow; 
                     display: flex;
                     flex-direction: column; 
                     align-items: center;
@@ -35,6 +54,12 @@
                         border-start-end-radius: 1rem;
                         border-start-start-radius: 1rem;
                         border: 2.5px solid white;
+                    }
+                    p{
+                        color: $color-general;
+                        text-align: center;
+                        font-size: 2rem
+
                     }
                     h2{
                         @extend %subtitulos;
@@ -50,7 +75,7 @@
         grid-area: footer;
     }
 }
-@media screen and (min-width:601px){
+@media screen and (min-width:600px){
     .contenedor-dos{
         grid-template-rows: 0.5fr 3fr 0.3fr;
         .header{
@@ -59,6 +84,14 @@
             }
         }
         .main{
+            .div-p{
+                margin-bottom: 4rem;
+                p{
+                    width: 70%;
+                    font-size: 2.5rem; 
+                    padding: 1.5rem 0rem;
+                }
+            }
             .cont-dinamico{
                 display: flex;
                 justify-items: center;
@@ -88,11 +121,11 @@
                     div{
                         max-width: 35rem;
                         h2{
-                            font-size: 4rem;
+                            font-size: 3.5rem;
                             height: 13rem;
                         }
                         h3{
-                            font-size: 4rem;
+                            font-size: 3.5rem;
                             height: 13rem;
                         }
                     }
@@ -110,6 +143,15 @@
             }
         }
         .main{
+            .div-p{
+                margin-bottom: 4.5rem;
+                max-width: 1024px;
+                p{
+                    width: 80%;
+                    font-size: 3rem; 
+                    padding: 2rem 0rem;
+                }
+            }
             .cont-dinamico{
                 div{
                     max-width: 40rem;                      

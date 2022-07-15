@@ -7,6 +7,9 @@
     <meta name="description" content="Aun no sé que poner, pero juro que para el proyecto final se me va a ocurrir algo épico. :3">
     <meta name="keywords" content="Palabras, clave, Para, El proyecto, Final, Lo juro, _:3">
 
+    <!-- Texto animado -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,7 +56,7 @@
                     </div>
                 </div>
               </nav>
-              <h1 class="header__h1">Contacto</h1>
+              <h1 class="header__h1 animate__animated animate__bounce animate__flash">Contacto</h1>
         </header>
         <main class="main">
             <form action="" class="form">
@@ -64,28 +67,29 @@
                         <label for="nombre" class="form__lab">
                             Completa con nombre y apellido 
                          </label>
-                        <input type="text" name="nombre" placeholder="tu nombre" class="form__input">
+                        <input type="text" name="nombre" placeholder="xxxxxxxx xxxxxxxx" class="form__input">
                     </div>
         
                     <div class="form__div">
                         <label for="email" class="form__lab">
                             Completa con tu email
                         </label>
-                        <input type="email" name="email" placeholder="tuemail@...com" class="form__input">
+                        <input type="email" name="email" placeholder="xxxx xxxx xxxx@ xxxx" class="form__input">
                     </div>
         
                     <div class="form__div">
                         <label for="numero-telefonico" class="form__lab">
-                            Completa con tu número telefonico
+                            Asunto de la consulta
                         </label>
-                        <input type="number" name="numero-telefonico" placeholder="097267456" class="form__input">
+                        <input type="text" name="asunto" placeholder="xxxx xxxx xxxx xxxx" class="form__input">
                     </div>
         
                     <div class="form__div">
                         <label for="consulta" class="form__lab">
                             Escribenos
                          </label>
-                        <input type="text" name="consulta" placeholder="escribe tu consulta aquí" class="form__input-consulta">
+                         <textarea name="consulta" placeholder="xxxx xxxx xxxx xxxx" class="form__input-consulta" cols="30" rows="10"></textarea>
+                        
                     </div>
         
                     <div class="form__div-1">
@@ -98,11 +102,18 @@
       
         <footer class="footer">
             <div class="footer__img">
-                <img src="../img/bxl-facebook.svg" alt="">
-                <img src="../img/bxl-instagram(1).svg" alt="">
-                <img src="../img/bxl-twitter.svg" alt="">
+                <a href="https://es-la.facebook.com/" target="_blank" style="text-decoration: none;">
+                    <img src="../img/fb.png" alt="">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" style="text-decoration: none;">
+                    <img src="../img/ig.png" alt="">
+                </a>
+                <a href="https://twitter.com/?lang=es" target="_blank" style="text-decoration: none;">
+                    <img src="../img/tw.png" alt="">
+                </a>
             </div>
             <h2 class="footer__h2"> Todos los derechos reservados</h2>
+            <h2 class="footer__h2">Creado por Mauricio Paiva</h2>
         </footer> 
     </div>
     <!-- JavaScript Bundle with Popper -->

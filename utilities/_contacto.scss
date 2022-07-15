@@ -54,7 +54,7 @@
                     justify-content: space-between;
                     .form__input-1{
                         background-color: $hover-color;
-                        color: white;
+                        color: $color-general;
                         border-radius: 0.5rem;
                         border: 0.5px white solid;
                         width: 40%;
@@ -98,12 +98,20 @@
         .header{
             .header__h1{
                 font-size: 12rem;
+                margin-bottom: 2rem;
             }
         }
         .main{
             font-size: 2.1rem;
             .form{
                 max-width: 80rem;
+                .form__area{
+                    .form__div{
+                        .form__input-consulta{
+                            padding: 0.5rem 11rem;
+                        }
+                    }
+                }
             }
         }
     }
