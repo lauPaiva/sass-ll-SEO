@@ -16,10 +16,10 @@
             @include flex-center;
             width: 100%;
             margin-bottom: 3.5rem;
-            background: $hover-color;
+            background: rgb(107,73,80);
+            background: linear-gradient(175deg, rgba(107,73,80,1) 0%, rgba(140,91,101,1) 72%, rgba(219,145,160,1) 100%); 
             box-shadow: 0px 1px 0.1px #bfb5af inset,
-                        0px 7px 30px -15px black;
-                        
+                        0px 7px 30px -15px black;           
             p{
                 width: 80%;
                 color: $color-general;
@@ -44,7 +44,7 @@
                 margin-bottom: 7rem;
                 div{
                     width: 100%;
-                    box-shadow: 0px 2px 0.1px $color-shadow; 
+                    box-shadow: 0px 2px 0.1px white; 
                     display: flex;
                     flex-direction: column; 
                     align-items: center;
@@ -154,7 +154,8 @@
             }
             .cont-dinamico{
                 div{
-                    max-width: 40rem;                      
+                    max-width: 40rem;     
+                    position: relative;                 
                     h2{
                         font-size: 5rem;
                         height: 15rem;                       
@@ -165,6 +166,33 @@
                     }
                     transition: 0.5s;
                 }
+                div::before{
+                    content:"";
+                    width: 2px;
+                    height: 0;
+                    top: 5%;
+                    right: 0;
+                    background-color: white;
+                    position: absolute;
+                }
+                div:hover::before{
+                    height: 95%;
+                    transition: 0.5s;
+                }
+                div::after{
+                    content:"";
+                    width: 0;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: white;
+                    position: absolute;
+                }
+                div:hover::after{
+                    width: 100%;
+                    transition: 0.5s;
+                }
+                
                 div:hover{
                     transform: scale(1.1);  
                     transition: 0.5s;                       

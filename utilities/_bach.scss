@@ -3,7 +3,7 @@
     grid-template-areas: "header""main""footer";
     grid-template-rows: 0.5fr 4fr 0.15fr;
     .header{
-        grid-area: header;
+        grid-area: header; 
         .header__h1{
             @include titulos;
         }
@@ -16,12 +16,16 @@
         text-align: center;
         @include flex-center-col;
         .cont-4to, .cont-5to, .cont-6to{
+            position: relative;
             @include flex-center-col;
             width: 95%;
             padding: 2rem 0rem 4rem 0rem;
             margin-bottom: 4rem;
-            background: rgb(88,44,77);
-            background: linear-gradient(45deg, rgba(88,44,77,1) 2%, rgba(162,103,105,1) 35%, rgba(195,156,152,1) 78%, rgba(236,226,208,1) 100%); 
+            background: rgb(107,73,80);
+            background: linear-gradient(315deg, rgba(107,73,80,1) 0%, rgba(140,91,101,1) 25%, rgba(219,145,160,1) 50%, rgba(212,167,176,1) 75%, rgba(255,207,217,1) 100%);  
+            span{
+                display: none;
+            }
             h3{
                 font-size: 5rem;
                 margin-bottom: 2rem;
@@ -55,9 +59,11 @@
         }
         .cont-5to{
             margin: 2rem 0rem;
+                 
         }
         .cont-6to{
             margin: 4rem 0rem 10rem 0rem;
+            
         }
     }
     .footer{
@@ -76,6 +82,7 @@
             .cont-4to, .cont-5to, .cont-6to{
                 h3{
                     font-size: 7rem;
+                    box-shadow: 0px 2px 0.1px white;
                 }
                 .cont-bach{
                     .div-img{
@@ -107,7 +114,22 @@
                 display: flex;
                 justify-content: space-evenly;
                 padding: 0;
-
+                
+                span{
+                    display: inherit;
+                    width: 40vw;
+                    max-width: 75rem;
+                    background-image: url(../img/fondo3-1.png);
+                    background-repeat: repeat;
+                    background-color: $bg-color;
+                    background-position: center;
+                    height: 2.3vw;
+                    min-height: 2.9rem;
+                    position: absolute;
+                    transform: rotate(135deg);
+                    top: 10vw;
+                    left: -10vw;
+                }   
                 h3{
                     font-size: 9rem;
                     margin: 0;
@@ -127,7 +149,43 @@
                         margin-left: 2rem;
                         max-width: 35rem;
                         padding: 0rem 0rem 2.5rem 0rem;
+                        position: relative;
+                        transition: 0.4s;
                     }
+                    .p::after{
+                        content: "";
+                        width: 2px;
+                        display: block;
+                        height: 0;
+                        background-color: white;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                    .p:hover::after{
+                        height: 100%;
+                        transition: 0.5s;
+                    }
+                    .p::before{
+                        content: "";
+                        width: 0;
+                        display: block;
+                        height: 2px;
+                        background-color: white;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                    .p:hover::before{
+                        width: 100%;
+                        transition: 0.4s;
+                    }
+                    .p:hover{
+                        scale: 1.05;
+                        transition: 0.4s;
+                        padding-right: 1rem;
+                    }
+                    
                     
                 }
                 
@@ -140,7 +198,7 @@
         .main{
             font-size: 3rem;
             .cont-4to, .cont-5to, .cont-6to{
-                margin-bottom: 12rem;
+                margin: 0rem 0rem 15rem 0rem;
                 .cont-bach{
                     .div-img{
                         img{

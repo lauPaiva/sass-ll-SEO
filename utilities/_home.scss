@@ -2,7 +2,7 @@
 .contenedor-uno{
     display: grid;
     grid-template-areas: "header""main""footer";
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 3.2fr 0.5fr;
     min-height: 100vh;
     video{
         position: fixed;
